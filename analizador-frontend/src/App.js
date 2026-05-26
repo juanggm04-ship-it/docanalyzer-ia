@@ -467,6 +467,16 @@ export default function App() {
           </div>
         )}
       </main>
+      <footer style={{
+        textAlign: 'center',
+        padding: '20px',
+        marginTop: '40px',
+        color: 'var(--text-muted)', // Usa el mismo color tenue de tu app
+        fontSize: '14px',
+        borderTop: '1px solid var(--border)' // Usa el borde sutil de tu interfaz
+      }}>
+        <p>© 2026 DocAnalyzer IA. Desarrollado por Juan Gabriel para INNOVA FAT.</p>
+      </footer>
 
       <style>{`
         @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }

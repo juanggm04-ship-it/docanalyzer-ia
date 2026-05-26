@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Factura Electrónica de Prueba</title>
+    <style>
+        body { font-family: Arial, sans-serif; color: #333; font-size: 12px; line-height: 1.4; padding: 20px; }
+        .header-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+        .logo-sec { width: 60%; }
+        .ruc-box { width: 40%; border: 2px solid #000; text-align: center; padding: 15px; background-color: #f9f9f9; }
+        .ruc-box h2 { margin: 0; font-size: 18px; letter-spacing: 1px; }
+        .ruc-box h3 { margin: 5px 0; font-size: 14px; color: #555; }
+        .info-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; background: #fafafa; border: 1px solid #ddd; }
+        .info-table td { padding: 8px; vertical-align: top; }
+        .items-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+        .items-table th { background-color: #003366; color: white; padding: 8px; font-size: 11px; text-align: left; }
+        .items-table td { padding: 8px; border-bottom: 1px solid #ddd; }
+        .text-right { text-align: right; }
+        .text-center { text-align: center; }
+        .totals-table { width: 40%; float: right; border-collapse: collapse; margin-bottom: 20px; }
+        .totals-table td { padding: 6px; border-bottom: 1px solid #ddd; }
+        .footer { margin-top: 50px; border-top: 1px solid #ccc; padding-top: 10px; font-size: 10px; color: #777; }
+        .qr-placeholder { width: 100px; height: 100px; border: 1px solid #999; display: inline-block; text-align: center; line-height: 100px; font-size: 9px; color: #999; }
+    </style>
+</head>
+<body>
+
+    <!-- CABECERA -->
+    <table class="header-table">
+        <tr>
+            <td class="logo-sec">
+                <h1 style="margin: 0; color: #003366;">DISTRIBUIDORA DE PRUEBA S.A.C.</h1>
+                <p style="margin: 5px 0;">Av. Las Flores 123, San Isidro, Lima, Perú<br>
+                Teléfono: (01) 456-7890 | Email: contacto@empresadeprueba.com</p>
+            </td>
+            <td class="ruc-box">
+                <h2>R.U.C. 20123456789</h2>
+                <h3>FACTURA ELECTRÓNICA</h3>
+                <h2 style="color: #d32f2f;">F001-00001234</h2>
+            </td>
+        </tr>
+    </table>
+
+    <!-- INFORMACIÓN DEL CLIENTE -->
+    <table class="info-table">
+        <tr>
+            <td style="width: 15%;"><strong>Señor(es):</strong></td>
+            <td style="width: 50%;">CONSTRUCTORA E INVERSIONES EJEMPLO S.A.C.</td>
+            <td style="width: 15%;"><strong>Fecha Emisión:</strong></td>
+            <td style="width: 20%;">26/05/2026</td>
+        </tr>
+        <tr>
+            <td><strong>R.U.C.:</strong></td>
+            <td>20987654321</td>
+            <td><strong>Moneda:</strong></td>
+            <td>SOLES (S/)</td>
+        </tr>
+        <tr>
+            <td><strong>Dirección:</strong></td>
+            <td>Jr. Los Cedros 456, Huaraz, Ancash, Perú</td>
+            <td><strong>Tipo de Pago:</strong></td>
+            <td>Contado</td>
+        </tr>
+    </table>
+
+    <!-- DETALLE DE ITEMS -->
+    <table class="items-table">
+        <thead>
+            <tr>
+                <th style="width: 10%;">CANT.</th>
+                <th style="width: 15%;">UNIDAD</th>
+                <th style="width: 45%;">DESCRIPCIÓN</th>
+                <th style="width: 15%; class="text-right"">VALOR UNIT.</th>
+                <th style="width: 15%; class="text-right"">IMPORTE</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="text-center">5.00</td>
+                <td>Unidades</td>
+                <td>Servicio de Consultoría en Gestión del Cambio Estructural</td>
+                <td class="text-right">200.00</td>
+                <td class="text-right">1,000.00</td>
+            </tr>
+            <tr>
+                <td class="text-center">2.00</td>
+                <td>Unidades</td>
+                <td>Licencias de Software de Optimización Operativa de Procesos</td>
+                <td class="text-right">500.00</td>
+                <td class="text-right">1,000.00</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- TOTALES Y CÓDIGO QR -->
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 60%; vertical-align: top;">
+                <p><strong>SON: DOS MIL TRECIENTOS SESENTA Y 00/100 SOLES</strong></p>
+                <div class="qr-placeholder">CÓDIGO QR SIMULADO</div>
+                <p style="font-size: 10px; margin-top: 5px;">Representación impresa de la Factura Electrónica.<br>Consulte la validez de este comprobante en el portal de la SUNAT.</p>
+            </td>
+            <td style="width: 40%; vertical-align: top;">
+                <table class="totals-table" style="width: 100%;">
+                    <tr>
+                        <td>Op. Gravada:</td>
+                        <td class="text-right">S/ 2,000.00</td>
+                    </tr>
+                    <tr>
+                        <td>I.G.V. (18%):</td>
+                        <td class="text-right">S/ 360.00</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; background: #eee;">Importe Total:</td>
+                        <td class="text-right" style="font-weight: bold; background: #eee;">S/ 2,360.00</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <div class="footer text-center">
+        <p>Esta es una simulación de comprobante de pago con fines educativos y de prueba. No posee validez fiscal real.</p>
+    </div>
+
+</body>
+</html>

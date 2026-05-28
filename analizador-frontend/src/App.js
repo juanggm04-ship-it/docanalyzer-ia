@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import "./index.css";
 
-const API_URL = "http://localhost:3001";
+const API_URL = "https://analizador-backend-slww.onrender.com";
 
 // ── Icono SVG inline ──────────────────────────────────────────────────────────
 const Icon = ({ name, size = 20 }) => {
